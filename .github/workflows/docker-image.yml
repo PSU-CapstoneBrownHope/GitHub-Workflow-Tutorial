@@ -15,9 +15,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    
+    # Build
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build -t test-build .
       
-    - name: Run
+    # Test
+    #- name: Test App in Container 
+    #- run: docker run 
+
+    # Run
+    - name: Run App in Container
       run: docker run test-build
