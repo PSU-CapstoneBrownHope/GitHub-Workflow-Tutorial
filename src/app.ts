@@ -6,5 +6,6 @@ function factorialRec(n: number): number {
 
     return n * factorialRec(n - 1);
 }
+error
 
 console.log(factorialRec(5));
