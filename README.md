@@ -61,5 +61,36 @@ Let's write a test case to see if the ```factorialRec``` function in ```src/app.
 
 ## Using git and GitHub
 
+Before we start developing in the project we want to pull the most recent changes from the GitHub repository and create a branch so that our changes don't affect others on the team until we are ready. 
+
+```
+git pull origin main
+git checkout -b factorial-tests-yourname
+```
+
+Now let's edit that ```test/factorial.test.ts``` file to include a test for the n = 0 case:
+
+```
+test('factorial of 0 is 0', () => {
+    expect(factorialRec(0)).toBe(0);
+})
+```
+
+Save the file and rerun ```npm test```. What happened?
+
+The test results show that our test has failed, which is actually a good thing! Through testing we have reveled a bug in the code.
+
+Let's commit our code now to save our progress in git.
+
+```
+git add .
+git commit -m "Added n = 0 test for factorialRec"
+```
+
+The first command staged the changed that we made and the second command committed those changes to git. Our branch (and the changes we made) are now ready to be pushed to GitHub so that our team members can see our work. 
+
+```
+git push origin 
+
 ## Creating PRs and interacting with the CI system
 
