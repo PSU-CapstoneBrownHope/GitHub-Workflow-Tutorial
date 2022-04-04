@@ -1,4 +1,3 @@
-
 // Calculate the factorial of the number n recursively
 function factorialRec(n: number): number {
     if (n == 1)
@@ -8,3 +7,5 @@ function factorialRec(n: number): number {
 }
 
 console.log(factorialRec(5));
+
+module.exports = factorialRec;

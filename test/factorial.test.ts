@@ -1,5 +1,7 @@
 import { exportAllDeclaration } from "@babel/types"
 
-test('one + one is equal to two', () => {
-    expect(1 + 1).toBe(2);
+const factorialRec = require('../src/app')
+
+test('factorial of 5 is 1*2*3*4*5', () => {
+    expect(factorialRec(5)).toBe(1*2*3*4*5);
 })
